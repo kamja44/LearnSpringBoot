@@ -1,13 +1,14 @@
-package com.example.hello;
+package com.boot.sailing;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class HelloApplication {
+public class SailingApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(HelloApplication.class, args);
+        SpringApplication.run(SailingApplication.class, args);
+        System.out.println("Hello spring boot !!");
     }
 
 }
