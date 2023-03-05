@@ -1,6 +1,8 @@
 package com.boot.sailing.v1.service;
 
+import com.boot.sailing.v1.dao.MenuDao;
 import lombok.extern.log4j.Log4j2;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
@@ -12,12 +14,25 @@ import java.util.Map;
 @Service
 @Log4j2
 public class MenuSvc {
+    @Autowired
+    MenuDao menuDao;
+
+    public List<Map<String, Object>> doList(){
+
+        // Data 만들기 , List , Map
+        List<Map<String, Object>> list = menuDao.doList();
+
+        log.info(list);
+
+        return list;
+
+    }
 
     public MenuSvc() {
         log.info("============== MenuSvc , 생성자 =====================");
     }
 
-    public List<Map<String, Object>> doList(){
+    public List<Map<String, Object>> doListold(){
         // Data 만들기, List, Map
         List<Map<String, Object>> list = new ArrayList<>();
 
