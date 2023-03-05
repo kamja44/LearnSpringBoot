@@ -9,7 +9,7 @@
         SELECT no, coffee, kind, price,
         DATE_FORMAT(reg_day,'%Y.%m.%d') AS reg_day,
         DATE_FORMAT(mod_day,'%Y.%m.%d') AS mod_day
-        FROM coffee_menu;
+        FROM coffee_menu
     </select>
 
 </mapper>
